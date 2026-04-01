@@ -1,0 +1,57 @@
+{
+  "_comment": "请根据你游戏窗口在 1920x1080 下的实际布局，用截图工具测量坐标后修改下方区域。坐标为屏幕绝对像素。",
+  "screen": {
+    "width": 1920,
+    "height": 1080
+  },
+  "tesseract": {
+    "cmd": "",
+    "_comment_cmd": "若 Tesseract 未加入 PATH，在此填写完整路径，例如 C:\\\\Program Files\\\\Tesseract-OCR\\\\tesseract.exe",
+    "lang": "chi_sim+eng"
+  },
+  "human": {
+    "delay_mean_sec": 0.3,
+    "delay_std_sec": 0.08,
+    "delay_min_sec": 0.12,
+    "delay_max_sec": 0.9,
+    "bezier_steps_min": 18,
+    "bezier_steps_max": 42,
+    "bezier_jitter_px": 2.5
+  },
+  "hotkeys": {
+    "start": "f8",
+    "pause": "f10",
+    "emergency_stop": "f9"
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "trade_bot.log",
+    "console": true
+  },
+  "loop_interval_sec": 0.45,
+  "items": [
+    {
+      "id": "ammo_pso",
+      "enabled": true,
+      "name": "9x19mm PSO",
+      "type": "cheap_buy",
+      "max_price": 120,
+      "price_region": [1420, 380, 120, 28],
+      "_comment_regions": "price_region 格式为 [左上角x, 左上角y, 宽, 高]，需覆盖交易行列表中该物品价格数字区域",
+      "buy_button_region": [1600, 395, 80, 24],
+      "row_anchor_region": [1180, 360, 200, 36]
+    },
+    {
+      "id": "mandel_skin",
+      "enabled": true,
+      "name": "曼德尔砖皮",
+      "type": "limited_snipe",
+      "max_price": 999999,
+      "countdown_region": [860, 120, 220, 40],
+      "pre_click_seconds": 1.0,
+      "buy_button_region": [960, 620, 140, 36],
+      "burst_duration_sec": 3.0,
+      "burst_interval_sec": 0.045
+    }
+  ]
+}

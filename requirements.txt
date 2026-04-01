@@ -1,0 +1,5 @@
+# 游戏交易行辅助脚本依赖（Windows 上建议 Python 3.10+）
+pyautogui>=0.9.54
+pytesseract>=0.3.10
+Pillow>=10.0.0
+pynput>=1.7.6
